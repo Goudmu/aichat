@@ -20,6 +20,7 @@ import { cn } from "@/lib/utils";
 import UserAvatar from "@/components/own/avatar/user-avatar";
 import BotAvatar from "@/components/own/avatar/bot-avatar";
 import { useProModal } from "@/hooks/use-pro-modal";
+import Typewriter from "typewriter-effect";
 
 const ConversationPage = () => {
   const router = useRouter();
@@ -123,7 +124,17 @@ const ConversationPage = () => {
                     )}
                   >
                     {message.role === "user" ? <UserAvatar /> : <BotAvatar />}
-                    <p className=" text-sm">{String(message.content)}</p>
+                    {message.role === "user" ? (
+                      <p className=" text-sm">{String(message.content)}</p>
+                    ) : (
+                      <Typewriter
+                        options={{
+                          strings: String(message.content),
+                          autoStart: true,
+                          delay: 10,
+                        }}
+                      />
+                    )}
                   </div>
                 );
               }
