@@ -22,27 +22,6 @@ const tools = [
     href: "/conversation",
   },
   {
-    label: "Image Generation",
-    icon: ImageIcon,
-    href: "/image",
-    color: "text-pink-500",
-    bgColor: "bg-pink-500/10",
-  },
-  {
-    label: "Video Generation",
-    icon: VideoIcon,
-    href: "/video",
-    color: "text-purple-500",
-    bgColor: "bg-purple-500/10",
-  },
-  {
-    label: "Music Generation",
-    icon: Music,
-    href: "/music",
-    color: "text-emerald-500",
-    bgColor: "bg-emerald-500/10",
-  },
-  {
     label: "Code Generation",
     icon: Code,
     href: "/code",
